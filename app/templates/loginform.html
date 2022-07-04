@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>integratorr</title>
+    <link rel="icon" href="{% static 'baba1.png' %}">
+    <link rel="stylesheet" href="{% static 'css5/style5.css' %}">
+</head>
+<body style="margin-top:0;margin-left:0;background:#add8e6">
+<div style="width:70%;margin:auto;text-align:center;margin-top:10vh;height:50px">
+
+    <hr style="border:0.01px solid black;">
+    <div style="float:left;margin-left:10px;"><a href="home" style="">HOME</a></div>
+    <div style="float:left;margin-left:30px;"><a href="blog" style="">BLOG</a></div>
+    <div style="float:left;margin-left:30px;"><a href="demo" style="">PROJECTS</a></div>
+    <div style="float:left;margin-left:30px;"><a href="about" style="">ABOUT</a></div>
+    <div style="float:right;margin-right:10px;"><a href="login" style="">SIGN-IN</a></div>
+     <br>
+    <hr style="border:0.01px solid black;">
+</div>
+<div id="mbox" style="margin:auto;background:white;width:70%;border-radius: 15px;height:100px;;padding-left:30px;color:grey;">
+    <h1 style="margin-bottom:10px;color:black;">Sign Up</h1>
+    Please fill in this form to create an account!
+   <form method="post">
+        {% csrf_token %}
+       <div style="float:left;width:50%">{{ form.first_name }}</div>
+       <div >{{ form.last_name }}</div>
+       <div style="width:50%">{{ form.username }}
+       <div style="display:none;color:red;" id="check_username"><img src="{% static 'error.png' %}" style="height:20px;width:30px;"> Increase length of Username</div>
+           <div style="color:red;">
+
+           {{usercheck}}
+
+       </div></div>
+       <div style="width:50%">{{ form.password }}
+           <div style="display:none;color:red;" id="check_password"><img src="{% static 'error.png' %}" style="height:20px;width:30px;"> Invalid Password</div>
+       <div id="message" style="display:none;">
+          <h3>Password must contain the following:</h3>
+          <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+          <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+          <p id="number" class="invalid">A <b>number</b></p>
+          <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+       </div>
+       <div style="width:50%">{{ form.confirm_password }}
+       <div style="display:none;color:red;" id="check_confirm_password"><img src="{% static 'error.png' %}" style="height:20px;width:30px;">Password does not match</div>
+       </div>
+       <div style="width:50%;float:left;">{{ form.number }}
+       <div style="display:none;color:red;" id="number_check">
+           <img src="{% static 'error.png' %}" style="height:20px;width:30px;">Invalid Phone number
+       </div>
+       </div>
+       <div style="width:50%;">{{ form.gender }}</div>
+       <div style="">{{ form.email }}
+       <div style="display:none;color:red;" id="email_check">
+           <img src="{% static 'error.png' %}" style="height:20px;width:30px;">Invalid Email address
+       </div>
+       </div>
+        <div style="">{{ form.address }}</div>
+       <div style="width:50%;">{{ form.postal_code }}
+       <div id="pincode_check" style="display:none;color:red;">
+           <img src="{% static 'error.png' %}" style="height:20px;width:30px;">Invalid Postal Code
+       </div></div>
+       <div style="width:50%;">{{ form.city }}</div>
+       <div style="width:50%;">{{ form.state }}</div>
+       <div style="width:50%;">{{ form.country }}</div>
+
+
+            <br>
+        <input type="submit" value="Sign Up" class="button">
+        </form>
+</div>
+
+<script  src="{% static 'js/anim2.js' %}"></script>
+<script  type="module" src="{% static 'js/anim3.js' %}"></script>
+</body>
+</html>

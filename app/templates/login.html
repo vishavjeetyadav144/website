@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{% static 'css2/style1.css' %}">
+    <link rel="icon" href="{% static 'baba1.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <title>integratorr</title>
+</head>
+<body>
+<div id="baba1">
+    <div id="mbaba1">
+
+    <div id="box11" style="background:#532915;opacity:0.3;"><div class="text"> <a href="home">HOME</a></div></div>
+        <div id="box22" style="background:#532915;opacity:0.3;"><div class="text"> <a href="about">ABOUT</a></div></div>
+        <div id="box33" style="background:#532915;opacity:0.3;"><div class="text"> <a href="demo">DEMO</a></div></div>
+        <div id="box44" style="background:#532915;opacity:0.3;"><div class="text"> <a href="blog">BLOG</a> </div></div>
+        <img src="{% static 'baba1.png' %}" style="width:100%;height:100%;opacity:0.9;position:relative;left:0px;top:0px;">
+</div>
+
+</div>
+<div id="mmbox">
+    <div id="mmbox1">
+        <img src="{% static 'login.png' %}" style="height=30%;width:30%;margin-left:35%;margin-top:5%;margin-bottom:5%;">
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+
+
+        <input type="submit" value="Log In" class="button">
+
+        </form>
+        <button type="submit" class="button"><a href="signup" style="font-size: 16px;font-family: 'Baloo Bhai 2', cursive;font-size: 18px;">I don't have account </a></button>
+        <div style="text-align:center;margin-top:10px;color:red;">{{error}}</div>
+         <br><br>
+    </div>
+</div>
+
+<div id="mbox">
+    <div id="mbox1">
+        <img src="{% static 'login.png' %}" style="height=30%;width:30%;margin-left:35%;margin-top:5%;margin-bottom:5%;">
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+            <br>
+        <input type="submit" value="Log In" class="button">
+
+
+        </form>
+        <button type="submit" class="button"><a href="signup" style="font-size: 16px;font-family: 'Baloo Bhai 2', cursive;font-size: 18px;">I don't have account </a></button>
+        <div style="text-align:center;margin-top:10px;color:red;">{{error}}</div>
+         <br><br>
+    </div>
+</div>
+<div id="baba">
+    <div id="mbaba">
+        <div id="box1" style="background:#532915;opacity:0.3;"><div class="text"> <a href="home">HOME</a></div></div>
+        <div id="box2" style="background:#532915;opacity:0.3;"><div class="text"> <a href="about">ABOUT</a></div></div>
+        <div id="box3" style="background:#532915;opacity:0.3;"><div class="text"> <a href="demo">DEMO</a></div></div>
+        <div id="box4" style="background:#532915;opacity:0.3;"><div class="text"> <a href="blog">BLOG</a> </div> </div>
+        <img src="{% static 'baba1.png' %}" style="width:100%;height:100%;opacity:0.9;position:relative;left:0px;top:0px;">
+    </div>
+</div>
+
+</div>
+
+
+
+</body>
+<script src="{% static 'js/anim1.js' %}"></script>
+</html>

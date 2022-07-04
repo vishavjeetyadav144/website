@@ -1,0 +1,121 @@
+body{
+    margin-top:0;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:0;
+}
+.username,.password{
+  width: 65%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  border-radius: 15px;
+    margin-left:15%;
+
+}
+#mbox{
+   width:50%; min-width:500px;
+   height:100vh;min-height:500px;
+   background:#add8e6;float:left;
+}
+#mmbox{
+    width:100%;background:#add8e6;height:55vh;
+}
+#mmbox1{
+
+    background:white;opacity:0.5;border-radius: 25px;
+    width:50%;
+    margin:auto;
+    position:relative;
+    top:25%;
+
+}
+#mbox1{
+
+    background:white;opacity:0.5;border-radius: 25px;
+    width:50%;
+    position:relative;
+    top:30%;
+    left:20%;
+}
+.button {
+ width:70%;
+   margin-top:2%;
+   margin-left:15%;
+  background-color: #203354; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+a{color:white;
+text-decoration:none;font-family: 'Odibee Sans', cursive;font-size:30px;
+}
+.text{text-align:center;
+background:black;border-radius:5px;
+position:relative;
+top:35%;
+}
+#baba1{
+
+width:100vw;height:45vh;
+}
+#baba{
+
+width:50%;min-width:500px;
+height:100vh;
+position:absolute;
+left:50%;
+}
+#mbaba1{
+    width:350px;
+    height:350px;
+    margin:auto;
+    position:relative;
+    top:25%
+}
+#mbaba{
+    width:350px;;
+    height:350px;;
+
+    margin:auto;
+    position:relative;
+    top:35%;
+
+}
+#box1,#box11{
+width:100px;
+height:100px;
+background:blue;border-radius:50%;
+position:absolute;
+    top:-125px;
+    left:125px;
+}
+#box2,#box22{
+width:100px;background:#532915;opacity:0.5;
+height:100px;
+background:blue;border-radius:50%;
+position:absolute;
+    top:125px;
+    left:375px;
+}
+#box3,#box33{
+width:100px;background:#532915;opacity:0.5;
+height:100px;
+background:blue;border-radius:50%;
+position:absolute;
+    top:125px;
+    left:-125px;
+}
+#box4,#box44{
+width:100px;background:#532915;opacity:0.5;
+height:100px;
+background:blue;border-radius:50%;
+position:absolute;
+    top:375px;
+    left:125px;
+}

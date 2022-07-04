@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+
+    <title>integratorr</title>
+    <link rel="stylesheet" href="{% static 'css/style0.css' %}">
+    <link rel="icon" href="{% static 'baba1.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Taviraj&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div style="width:70%;margin:auto;text-align:center;margin-top:10vh;">
+<h2 id="the">THE</h2>
+    <h1 style="font-family:sans serif;font-size:6vw;text-align:center;margin-top:0;margin-bottom:0;">INTEGRATORR</h1>
+    <h2 id="world">WORLD BELONGS TO US</h2>
+</div>
+<div style="width:70%;margin:auto;text-align:center;margin-top:10vh;height:50px">
+<hr style="border:0.01px solid black;">
+    <div style="float:left;margin-left:10px;"><a href="home" style="">HOME</a></div>
+    <div style="float:left;margin-left:30px;"><a href="blog" style="">BLOG</a></div>
+    <div style="float:left;margin-left:30px;"><a href="demo" style="">PROJECTS</a></div>
+    <div style="float:left;margin-left:30px;"><a href="about" style="">ABOUT</a></div>
+    {% ifequal i 'in' %}
+    {% csrf_token %}
+    <div style="float:right;margin-right:10px;"><a href="logout" style="" onclick="undo()">LOGOUT</a></div>
+    <div style="float:right;margin-right:30px;text-transform: uppercase;"><a href="" style="color:white;">{{user}}</a></div>
+     <br>
+    <hr style="border:0.01px solid black;">
+    </div>
+    {% else %}
+    <div style="float:right;margin-right:10px;"><a href="login" style="">SIGN-IN</a></div>
+     <br>
+    <hr style="border:0.01px solid black;">
+    </div>
+{% endifequal %}
+
+
+<div id="box">
+    <div id="box1"> <div class="text"> </div>   </div>
+    <div id="box2"> <div class="text"> </div> </div>
+    <div id="box3"> <div class="text">  </div></div>
+    <div id="box4"> <div class="text">  </div> </div>
+<img src="{% static 'baba1.png' %}" style="width:60%;height:60%;opacity:0.9;position:relative;left:125px;top:-275px;">
+</div>
+<script src="{% static 'js/anim.js' %}"></script>
+</body>
+</html>

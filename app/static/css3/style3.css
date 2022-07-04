@@ -1,0 +1,77 @@
+body{
+margin-top:0;margin-left:0;background:#add8e6;
+}
+#mbox{
+width:60%;
+min-width:400px;
+min-height:1400px;
+background:white;opacity:1;border-radius:20px;
+margin:auto;
+}
+#form{
+width:80%;text-align:center;color:grey;
+margin:auto;
+
+}
+.name, .phone{
+  border: 0;
+  width: 42%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  border-bottom: 5px solid #add8e6;
+  margin-left:10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.email{
+border: 0;
+  width: 90%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  border-bottom: 5px solid #add8e6;
+  margin-left:10px;
+}
+.subject{background:white;
+border: 0;color:grey;
+   width: 93%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  border-bottom: 5px solid #add8e6;
+  margin-left:10px;
+  margin-bottom:15px;
+}
+
+.message{float: none;
+border: 0;font-size;20px;
+width:93%;
+height:10vh;
+border-bottom: 5px solid #add8e6;
+margin-left:10px;resize: none;
+}
+select {
+    outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+#button{
+width:93%;
+   margin-top:2%;
+   margin-left:10px;;
+  background-color: #add8e6; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+}

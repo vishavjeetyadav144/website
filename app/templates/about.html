@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>integratorr</title>
+    <link rel="stylesheet" href="{% static 'css3/style3.css' %}">
+    <link rel="icon" href="{% static 'baba1.png' %}">
+</head>
+<body >
+
+<div id="mbox">
+    <div>
+        <h1 style="color:grey;font-size:400%;text-align:center;padding-top:100px;"> Vishwajeet ?</h1>
+        <p style="text-align:center;color:grey;">  " <i>A sad thing in life is that sometimes you meet someone who means a lot to you <br>only to find out in the end it was never bound to be and you just have to let go "</i></p>
+        <div style="width:25%;height:20%;margin:auto;"> <a href="home"><img src="{% static 'vishu.jpg' %}" style="width:100%;height:100%;border-radius: 50%;"></a> </div>
+        <div style="width:250px;;height:50px;;margin:auto;margin-top:10px;">
+            <a href="https://www.facebook.com/vishavjeet.yadav.12" target="blank"><img src="{% static 'fb.png'%}" style="width:35px;height:35px;margin-left:20px;"></a>
+            <a href="" ><img src="{% static 'gm.png'%}" style="width:35px;height:35px;margin-left:10px"></a>
+            <a href="https://www.instagram.com/_vishu.4__/" target="blank"><img src="{% static 'insta.png'%}" style="width:35px;height:35px;margin-left:10px"></a>
+            <a href="https://www.linkedin.com/in/vishavjeet-yadav-17b756166/" target="blank"><img src="{% static 'lin.png'%}" style="width:35px;height:35px;margin-left:10px"></a>
+        </div>
+        <h3 style="color:grey;font-size:25px;text-align:center;"> Hello World !</h3>
+        <div  style="width:70%;margin:auto;color:grey;margin-bottom:50px;">
+
+            <p style="text-align:center;">A <b>self learning</b> super computer named Nautilus can predict the future, and it became famous when it was able to locate Osama Bin Laden</p>
+            <p style="text-align:center;"> Ancient greeks worshipped <b>gods and goodesses</b> whose actions explained many of the mysteries of the world</p>
+            <p style="text-align:center;"> The Nobel Prize in <b>Economics </b>is not a real Nobel Prize</p>
+            <p style="text-align:center;"> The Beatles song ‘A Day in the Life’ has a frequency only <b>Dogs </b>can hear </p>
+            <p style="font-size:20px;text-align:center;"> Hope, Now you know my interest and what i like the most. I am Vishwajeet Yadav student of IIT Bombay pursuing major in Metallurgical engineering and Material science. I build this website for learning purpose, will show you demo of my Artificial Intelligence models also i'll post blogs here.</p>
+
+        </div>
+        </div>
+    <div id="form">
+        <h1 style="margin-botton:0px;padding-bottom:0px;">- GET IN TOUCH -</h1> <br>
+        <form  method="post">
+        {% csrf_token %}
+            <div>{{ form.name }}</div>
+            <div>{{ form.number }}
+            <div style="display:none;color:red;" id="number_check">
+           <img src="{% static 'error.png' %}" style="height:20px;width:30px;">Invalid Phone number
+       </div>
+            </div>
+            <div>{{ form.email }}
+            <div style="display:none;color:red;" id="email_check">
+           <img src="{% static 'error.png' %}" style="height:20px;width:30px;">Invalid Email address
+       </div>
+            </div>
+            <div>{{ form.subject }}</div>
+            <div>{{ form.message }}</div>
+            <br>
+        <input type="submit" value="submit" id="button">
+        </form>
+
+    </div>
+    <br><br><br>
+</div>
+<script>
+ window.onload = function get_body() {
+    var w=screen.width;
+    var elem = document.getElementById("mbox");
+    if(w<700){
+    elem.style.width="90vw";
+    elem.style.height="100%";
+    }
+
+}
+window.onload = function alert_body() {
+    alert("Click on Profile Picture for HOME")
+    }
+
+    var emailAddress=document.getElementsByClassName("email");
+    for (i = 0; i < emailAddress.length; i++) {
+    emailAddress[i].addEventListener("change", checkemail);
+    }
+
+function checkemail() {
+        var email=document.getElementsByClassName("email");
+        for (i = 0; i <email.length; i++) {
+            var email=email[i].value
+            var emailAdd = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if(email.match(emailAdd)) {
+                var error = document.getElementById("email_check");
+                error.style.display="none";
+                return ;
+            }
+            else {
+                var error = document.getElementById("email_check");
+                error.style.display="block";
+                var emailAddress=document.getElementsByClassName("email");
+                for (i = 0; i < emailAddress.length; i++) {
+                emailAddress[i].value=''
+                }
+                return ;
+            }
+
+
+        }
+        }
+     var phoneNumber=document.getElementsByClassName("phone");
+    for (i = 0; i < phoneNumber.length; i++) {
+    phoneNumber[i].addEventListener("change", checkPhone);
+    }
+
+function checkPhone() {
+        //var phone = document.forms["form"]["phone"].value;
+        var phone=document.getElementsByClassName("phone");
+        for (i = 0; i < phone.length; i++) {
+            var phone=phone[i].value
+            var phoneNum = /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/;
+            if(phone!=''){
+            if(phone.match(phoneNum)) {
+                var error = document.getElementById("number_check");
+                error.style.display="none";
+                return ;
+            }
+            else {
+                var error = document.getElementById("number_check");
+                error.style.display="block";
+                var phoneNumber=document.getElementsByClassName("phone");
+                for (i = 0; i < phoneNumber.length; i++) {
+                phoneNumber[i].value=''
+                }
+                return ;
+            }}
+            else{
+            var error = document.getElementById("number_check");
+                error.style.display="none";
+                return ;
+            }
+
+
+        }
+        }
+</script>
+</body>
+</html>
